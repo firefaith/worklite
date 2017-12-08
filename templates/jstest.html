@@ -1,0 +1,23 @@
+<!doctype html>
+<head>
+<title>Hello from Flask</title>
+<script src="{{ url_for('static', filename='js/jquery-3.2.1.slim.min.js') }}"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  cnt_txt = $("div#content").text();
+  console.log(cnt_txt)
+  $("div#content").html(cnt_txt);
+  
+  $("button").click(function(){	
+  $("p").html("<h1>W3School</h1>");
+
+  });
+});
+</script>
+</head>
+<body>
+<div id="content">{{ content }}</div>
+<p>Test</p>
+<button type="button">请点击这里</button>
+</body>
+</html>
